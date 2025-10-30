@@ -8,9 +8,8 @@ describe('Simple-Login-Test', () => {
 
         // Login as standard user
         await Login.login("standard_user","secret_sauce");
-        
+
         // Assert the product title is existing, and says "Products"
-        await browser.pause(2000);
         await expect(ProductPage.productTitle).toExist();
     })
 })
