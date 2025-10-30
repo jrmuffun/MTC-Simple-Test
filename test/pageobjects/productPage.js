@@ -1,7 +1,7 @@
-import URL from '../pageobjects/url.js'
+import Webpage from '../pageobjects/url.js';
 import {$} from '@wdio/globals'
 
-class ProductPage extends URL{
+class ProductPage extends Webpage{
     get productTitle() {
         // Get the "Products" title on the products page
         return $('.title')

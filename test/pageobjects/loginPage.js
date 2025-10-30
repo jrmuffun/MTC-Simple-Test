@@ -1,7 +1,7 @@
 import {$} from '@wdio/globals'
-import URL from '../pageobjects/url.js'
+import Webpage from '../pageobjects/url.js';
 
-class Login extends URL {
+class Login extends Webpage {
 
     get usernameInput () {
         // Get username input field
@@ -17,7 +17,9 @@ class Login extends URL {
     }
 
     open(){
-        URL.open();
+        // return browser.url("https://www.saucedemo.com/")
+        // const page = new Webpage();
+        return Webpage.open();
     }
     async login(username, password) {
         // input username (variable)
@@ -27,7 +29,6 @@ class Login extends URL {
         // Click login button
         await this.loginBttn.click();
     }
-
 }
 
 export default new Login();
