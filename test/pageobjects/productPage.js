@@ -1,8 +1,11 @@
-import URL from './url.js'
+import URL from '../pageobjects/url.js'
+import {$} from '@wdio/globals'
 
 class ProductPage extends URL{
     get productTitle() {
         // Get the "Products" title on the products page
-        document.querySelector('.title')
+        return $('.title')
     }
 }
+
+export default new ProductPage();

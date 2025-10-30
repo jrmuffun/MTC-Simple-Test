@@ -1,5 +1,5 @@
 import {$} from '@wdio/globals'
-import URL from './url.js'
+import URL from '../pageobjects/url.js'
 
 class Login extends URL {
 
@@ -9,7 +9,7 @@ class Login extends URL {
     }
     get passwordInput() {
         // Get password input field
-        return document.querySelector('input#password');
+        return $('input#password');
     }
     get loginBttn() {
         // Get login/submit button
@@ -19,13 +19,15 @@ class Login extends URL {
     open(){
         URL.open();
     }
-    login(username, password) {
+    async login(username, password) {
         // input username (variable)
-        this.usernameInput.setValue(username);
+        await this.usernameInput.setValue(username);
         // input password (variable)
-        this.passwordInput.setValue(password);
+        await this.passwordInput.setValue(password);
         // Click login button
-        this.loginBttn.click();
+        await this.loginBttn.click();
     }
 
 }
+
+export default new Login();
