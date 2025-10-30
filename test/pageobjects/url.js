@@ -1,9 +1,7 @@
 import {browser} from '@wdio/globals'
 
-class URL {
-    @param path
-
-    open(path) {
+export default class URL {
+    open() {
         return browser.url("https://www.saucedemo.com/")
     }
 }

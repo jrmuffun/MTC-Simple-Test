@@ -1,6 +1,7 @@
 import Login from './loginPage.js'
 import ProductPage from './productPage.js'
 import {expect} from '@wdio/globals'
+import {browser} from '@wdio/globals'
 
 // await URL.open;
 await browser.url('https://www.saucedemo.com/')
