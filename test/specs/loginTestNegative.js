@@ -1,6 +1,5 @@
 import Login from '../pageobjects/loginPage.js';
-import ProductPage from '../pageobjects/productPage.js';
-import {browser,expect} from '@wdio/globals'
+import {expect} from '@wdio/globals'
 
 describe('Simple Login Test Negative', () => {
     it('should not login with invalid credentials', async () => {

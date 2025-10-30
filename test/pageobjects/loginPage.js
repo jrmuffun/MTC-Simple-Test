@@ -16,12 +16,12 @@ class Login extends Webpage {
         return $('#login-button');
     }
     get loginError() {
+        // Get Login error field
         return $('h3[data-test="error"]')
     }
 
     open(){
-        // return browser.url("https://www.saucedemo.com/")
-        // const page = new Webpage();
+        // Calling this function in case paths become useful later
         return Webpage.open();
     }
     async login(username, password) {
