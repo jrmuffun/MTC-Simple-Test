@@ -15,6 +15,9 @@ class Login extends Webpage {
         // Get login/submit button
         return $('#login-button');
     }
+    get loginError() {
+        return $('h3[data-test="error"]')
+    }
 
     open(){
         // return browser.url("https://www.saucedemo.com/")
