@@ -2,6 +2,8 @@ import Login from '../pageobjects/loginPage.js';
 import ProductPage from '../pageobjects/productPage.js';
 import {expect} from '@wdio/globals'
 
+//TODO: Change usernames array to object, with shouldSucceed method to test if Login.loginError exists
+
 // Assign all usernames to an array
 const usernames = [
     "standard_user",
